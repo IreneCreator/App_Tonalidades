@@ -73,7 +73,7 @@ button:active { transform: translateY(1px); }
   overflow: hidden;
 }
 .btn:hover {
-  transform: scale(1.08) rotate(-2deg);
+  transform: scale(1.08);
   box-shadow: 0 6px 24px #fc575e66;
 }
 
