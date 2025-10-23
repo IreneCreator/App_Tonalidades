@@ -1,0 +1,98 @@
+/* Estilos básicos para la app sencilla */
+:root {
+  --bg: linear-gradient(135deg, #f7b42c 0%, #fc575e 100%);
+  --card: #fffbe6;
+  --accent: #ff5e62;
+  --accent2: #f7b42c;
+  --text: #2d3748;
+}
+
+* { box-sizing: border-box; }
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 640px;
+  margin: 6rem auto;
+  padding: 2rem;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(255,94,98,0.12), 0 1.5px 8px rgba(247,180,44,0.10);
+  border: 3px dashed var(--accent2);
+  animation: bounceIn 1s;
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+button:active { transform: translateY(1px); }
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 0 var(--accent2), 0 4px 12px #fc575e44;
+  letter-spacing: 2px;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.btn {
+  background: linear-gradient(90deg, var(--accent) 60%, var(--accent2) 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 12px #fc575e44;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.btn:hover {
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 6px 24px #fc575e66;
+}
+
+.output {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2563eb;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #fffbe6;
+  color: #ff5e62;
+  border: 2px solid var(--accent2);
+  box-shadow: 0 2px 8px #f7b42c44;
+  margin-top: 2rem;
+  animation: pop 0.4s;
+}
+@keyframes pop {
+  0% { transform: scale(0.7); opacity: 0; }
+  80% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
